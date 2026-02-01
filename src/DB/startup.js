@@ -1,19 +1,19 @@
-// const resetDB = require("./resetDB");
-// const createDB = require("./createDB");
-// const createTables = require("./createTables");
-// const initialization = require("./initialization");
-// async function startup() {
-//   console.log(`startup`);
-//   await resetDB();
-//   console.log(`resetDB`);
-//   await createDB();
-//   console.log(`createDB`);
-//   await createTables();
-//   console.log(`createTables`);
-//   await initialization();
-//   console.log(`initialization`);
-// }
-// startup();
+const resetDB = require("./resetDB");
+const createDB = require("./createDB");
+const createTables = require("./createTables");
+const initialization = require("./initialization");
+async function startup() {
+  console.log(`startup`);
+  await resetDB();
+  console.log(`resetDB`);
+  await createDB();
+  console.log(`createDB`);
+  await createTables();
+  console.log(`createTables`);
+  await initialization();
+  console.log(`initialization`);
+}
+startup();
 function TreeNode(data) {
   this.data = data;
   this.left = null;
