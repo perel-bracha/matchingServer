@@ -67,7 +67,7 @@ async function transformUsersExcelData(excelData) {
   return excelData.map((row) => {
     console.log(row["דירה_מס"]);
     const apartment = rows.find((apart) => {
-      console.log(apart.apart_name);
+      console.log(apart.apartment_id);
       return row["דירה_מס"] == apart.apart_name;
     });
     console.log(apartment);

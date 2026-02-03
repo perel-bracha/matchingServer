@@ -3,10 +3,11 @@ var mysql = require("mysql2");
 require("dotenv").config({ path: path.resolve(__dirname, "../../.env") }); // בדיקת טעינת המשתנים הסביבתיים
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+   host: 'hopper.proxy.rlwy.net', // Host from the connection string
+  user: 'root',                  // User from the connection string
+  password: 'rezRQDbDUWQZHoTPbBKbHdamCXjXSCVa', // Password from the connection string
+  database: 'railway',           // Database name from the connection string
+
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,

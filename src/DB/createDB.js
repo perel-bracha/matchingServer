@@ -5,9 +5,11 @@ require("dotenv").config({ path: path.resolve(__dirname, "../../.env") }); // ב
 function createDB() {
 
     var connection = mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASS,
+   host: 'hopper.proxy.rlwy.net', // Host from the connection string
+  user: 'root',                  // User from the connection string
+  password: 'rezRQDbDUWQZHoTPbBKbHdamCXjXSCVa', // Password from the connection string
+  database: 'railway',           // Database name from the connection string
+  port: 3306
     });
     
     connection.connect(function (err) {
@@ -15,7 +17,7 @@ function createDB() {
       console.log(" first connected to db succied");
     });
 
-    connection.query(`CREATE DATABASE ${process.env.DB_NAME}`, function (err, result) {
+    connection.query(`CREATE DATABASE ${"matching_db"}`, function (err, result) {
       if (err) throw err;
       console.log(`${process.env.DB_NAME} created`);
     });
